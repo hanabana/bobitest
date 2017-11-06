@@ -4,7 +4,7 @@ var app = express();
 var path = require('path');
 var server = require('http').createServer(app);
 var io = require('../..')(server);
-var port = process.env.PORT || 3000;
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 server.listen(port, function () {
   console.log('Server listening at port %d', port);
